@@ -44,4 +44,4 @@ jobs:
       uses: docker/build-push-action@v6
       with: 
         push: true
-        tags: ghcr.io/fredoom03/FastAPI-GitHub-Actions:latest
+        tags: ghcr.io/fredoom03/fastapi-github-actions:latest
