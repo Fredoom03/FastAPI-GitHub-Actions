@@ -18,4 +18,4 @@ class TestPerson:
             email="fredy_luque@hotmail.com",
         )
 
-        assert person is not None
+        assert person is None
