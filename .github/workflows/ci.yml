@@ -20,6 +20,8 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: "3.11"
+    - name: Listing files 
+      run: ls -la && pwd
     - name: Install dependencies
       run: pip install pytest pydantic pydantic[email]
     - name: Test with pytest
