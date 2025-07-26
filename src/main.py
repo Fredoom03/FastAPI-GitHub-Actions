@@ -1,7 +1,5 @@
 from models.person_model import Person
 
-import os
-
 
 def create_person():
     person = Person(
