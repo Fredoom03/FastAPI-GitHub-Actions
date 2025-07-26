@@ -37,7 +37,7 @@ jobs:
       with: 
         registery: ghcr.io
         username: ${{ github.actor }}
-        password: ${{ secret.GITHUB_TOKEN }}
+        password: ${{ secrets.GITHUB_TOKEN }}
     
     # Push image to ghcr.io
     # - name: Build and push to GitHub Container Registery 
