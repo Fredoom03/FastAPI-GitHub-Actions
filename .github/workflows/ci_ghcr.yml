@@ -1,7 +1,7 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
-name: Lint, test, build and push to DockerHub
+name: Lint, test, build and push to Github Container Registery
 
 on:
   push:
@@ -31,16 +31,17 @@ jobs:
     - name: Test with pytest
       run: pytest
 
-    # Login to DockerHub
-    - name: Login to Docker Hub
+    # Login to GitHub Container Registry
+    - name: Login to GitHub Container Registry
       uses: docker/login-action@v3
       with: 
-        username: ${{ secrets.DOCKER_USERNAME }}
+        registery: ghcr.io
+        username: ${{ github.actor }}
         password: ${{ secrets.DOCKER_TOKEN }}
     
-    # Push image to DockerHub
-    - name: Build and push to GitHub Container Registery 
-      uses: docker/build-push-action@v6
-      with: 
-        push: true
-        tags: fredoom03/ci-github-actions:latest
+    # # Push image to GitHub Container Registry
+    # - name: Build and push to GitHub Container Registery 
+    #   uses: docker/build-push-action@v6
+    #   with: 
+    #     push: true
+    #     tags: ghcr.io/fredoom03/FastAPI-GitHub-Actions:latest
