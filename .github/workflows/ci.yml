@@ -22,8 +22,8 @@ jobs:
         python-version: "3.11"
     - name: Listing files 
       run: ls -la && pwd
-    - name: Install dependencies
-      run: pip install pytest pydantic pydantic[email]
+    - name: Install dependencies from requirements file 
+      run: pip install -r requirements.txt
     - name: Test with pytest
       run: |
         pytest
