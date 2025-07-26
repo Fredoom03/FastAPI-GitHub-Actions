@@ -27,5 +27,4 @@ jobs:
     - name: Check and fix code lint using ruff linter
       run: python -m ruff check . --fix
     - name: Test with pytest
-      working-directory: src
       run: pytest
