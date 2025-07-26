@@ -39,9 +39,9 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.CR_AUTH }}
     
-    # # Push image to GitHub Container Registry
-    # - name: Build and push to GitHub Container Registery 
-    #   uses: docker/build-push-action@v6
-    #   with: 
-    #     push: true
-    #     tags: ghcr.io/fredoom03/FastAPI-GitHub-Actions:latest
+    # Push image to GitHub Container Registry
+    - name: Build and push to GitHub Container Registery 
+      uses: docker/build-push-action@v6
+      with: 
+        push: true
+        tags: ghcr.io/fredoom03/FastAPI-GitHub-Actions:latest
