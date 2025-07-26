@@ -3,9 +3,9 @@
 
 name: Lint, test, build and push to DockerHub
 
-# on:
-#   push:
-#     branches: [ "master" ]
+on:
+  push:
+    branches: [ "master" ]
   
 
 permissions:
